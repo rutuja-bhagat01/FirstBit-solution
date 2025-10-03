@@ -1,0 +1,60 @@
+**** MySQL EndModule Set b ****
+
+1.--> SELECT DISTINCT CustomerName
+	FROM Customers
+	ORDER BY CustomerName ASC;
+
+2.--> SELECT ProductName, Price FROM Products
+	ORDER BY Price DESC LIMIT 10;
+
+3.--> SELECT Salary  FROM Employees
+	ORDER BY Salary DESC LIMIT 1 OFFSET 1;
+
+4.--> SELECT City, COUNT(*) AS TotalCustomers FROM Customers GROUP BY City;
+
+5.--> SELECT Department, SUM(Salary) AS TotalSalary FROM Employees 
+	GROUP BY Department HAVING SUM(Salary) > 200000;
+
+6.--> SELECT LEFT(CustomerName, 3) AS First3Chars,
+    RIGHT(Phone_Number, 4) AS Last4Digits  FROM Customers;
+
+7.--> SELECT *  FROM Products WHERE product_name LIKE '%Pro%';
+
+8.--> SELECT Course, COUNT(*) AS TotalStudents FROM Students
+	GROUP BY Course  HAVING COUNT(*) >= 30;
+
+9.--> SELECT MONTH(OrderDate) AS Month, COUNT(*) AS TotalOrders
+	FROM Orders  GROUP BY MONTH(OrderDate) ORDER BY Month;
+
+10.--> SELECT Department, 
+       MAX(Salary) AS HighestSalary, 
+       MIN(Salary) AS LowestSalary
+	FROM Employees GROUP BY Department;
+
+11.--> Data
+
+12.--> ORDER BY DESC
+
+13.--> ASc
+
+14.--> 15.68
+
+15.--> count()
+
+16.--> SELECT c.customer_id, c.customer_name, AVG(o.total_amount) AS avg_order_value
+	FROM Customers c JOIN Orders o ON c.customer_id = o.customer_id
+	GROUP BY c.customer_id, c.customer_name  HAVING COUNT(o.order_id) > 2;
+
+17.--> SELECT p.product_id, p.product_name, 
+       COUNT(s.sale_id) AS sales_count  FROM Products p JOIN Sales s ON p.product_id = s.product_id
+	GROUP BY p.product_id, p.product_name  HAVING COUNT(s.sale_id) > 50;
+
+
+
+
+
+
+
+
+
+
