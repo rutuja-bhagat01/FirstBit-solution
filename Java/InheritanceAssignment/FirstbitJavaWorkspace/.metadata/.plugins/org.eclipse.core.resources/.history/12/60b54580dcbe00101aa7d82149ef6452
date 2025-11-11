@@ -1,0 +1,200 @@
+package com.firstbit.inheritancePlant;
+
+class Art {
+	String title;
+	String artist;
+	int yearCreated;
+	String artStyle;
+	double price;
+
+	// default constructor
+	Art() {
+		System.out.println("Art default constructor called...");
+		title = "Untitled";
+		artist = "Unknown";
+		yearCreated = 0;
+		artStyle = "Undefined";
+		price = 0.0;
+	}
+
+	// parameterized constructor
+	Art(String title, String artist, int yearCreated, String artStyle, double price) {
+		this.title = title;
+		this.artist = artist;
+		this.yearCreated = yearCreated;
+		this.artStyle = artStyle;
+		this.price = price;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
+	public int getYearCreated() {
+		return yearCreated;
+	}
+
+	public void setYearCreated(int yearCreated) {
+		this.yearCreated = yearCreated;
+	}
+
+	public String getArtStyle() {
+		return artStyle;
+	}
+
+	public void setArtStyle(String artStyle) {
+		this.artStyle = artStyle;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	void showArtDetails() {
+		System.out.println("Title: " + title);
+		System.out.println("Artist: " + artist);
+		System.out.println("Year Created: " + yearCreated);
+		System.out.println("Style: " + artStyle);
+		System.out.println("Price: ₹" + price);
+	}
+}// class Art ends here
+//*************************************************************
+
+class Painting extends Art {
+	String medium;
+	String canvasType;
+	double width, height;
+
+	// default constructor
+	Painting() {
+		super();
+		System.out.println("Painting default constructor called...");
+		medium = "Oil";
+		canvasType = "Cotton Canvas";
+		width = 50.0;
+		height = 70.0;
+	}
+
+	// parameterized constructor
+	Painting(String title, String artist, int yearCreated, String artStyle, double price, String medium,
+			String canvasType, double width, double height) {
+		super(title, artist, yearCreated, artStyle, price);
+		this.medium = medium;
+		this.canvasType = canvasType;
+		this.width = width;
+		this.height = height;
+	}
+
+	public String getMedium() {
+		return medium;
+	}
+
+	public void setMedium(String medium) {
+		this.medium = medium;
+	}
+
+	public String getCanvasType() {
+		return canvasType;
+	}
+
+	public void setCanvasType(String canvasType) {
+		this.canvasType = canvasType;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	// display details
+	void showPaintingDetails() {
+		super.showArtDetails();
+		System.out.println("Medium: " + medium);
+		System.out.println("Canvas Type: " + canvasType);
+		System.out.println("Dimensions: " + width + " x " + height + " cm");
+	}
+}// class Painting ends here
+
+class Sculpture extends Art {
+	String material;
+	double weight;
+	double height;
+
+	// default constructor
+	Sculpture() {
+		super();
+		System.out.println("Sculpture default constructor called...");
+		material = "Marble";
+		weight = 120.0;
+		height = 1.8;
+	}
+
+	// parameterized constructor
+	Sculpture(String title, String artist, int yearCreated, String artStyle, double price, String material,
+			double weight, double height) {
+		super(title, artist, yearCreated, artStyle, price);
+		this.material = material;
+		this.weight = weight;
+		this.height = height;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	// display details
+	void showSculptureDetails() {
+		super.showArtDetails();
+		System.out.println("Material: " + material);
+		System.out.println("Weight: " + weight + " kg");
+		System.out.println("Height: " + height + " m");
+	}
+}// class Sculpture ends here
+

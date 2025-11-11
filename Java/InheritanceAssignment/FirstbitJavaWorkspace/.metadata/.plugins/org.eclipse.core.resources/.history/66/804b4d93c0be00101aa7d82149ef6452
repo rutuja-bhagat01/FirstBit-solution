@@ -1,0 +1,80 @@
+package com.firstbit.inheritance;
+
+class Employee {
+
+	int id;
+	String name;
+	double salary;
+
+	//default constructor
+	Employee() {
+		System.out.println("Employee default constructor called...");
+		id = 131;
+		name = "Not given";
+		salary = 30000;
+	}
+
+	//para. constructor
+	Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	// display function
+	void display() {
+		System.out.println("Employee ID: " + this.id );
+		System.out.println("Name: " + this.name);
+		System.out.println("Salary : " + this.salary);
+	}
+}// class Employee ends here
+
+class Admin
+{
+	double allowence;
+	
+	//default constructor
+	Admin()
+	{
+		System.out.println("Admin default construcor called...");
+		allowence = 2000;
+	}
+
+	//para. constructor
+	Admin(double allowence) {
+		super();
+		System.out.println("Admin para. construcor called...");
+		this.allowence = allowence;
+	}
+	
+	//display function
+		void display()
+		{
+			System.out.println("Allowence: "+this.allowence);
+		}
+}

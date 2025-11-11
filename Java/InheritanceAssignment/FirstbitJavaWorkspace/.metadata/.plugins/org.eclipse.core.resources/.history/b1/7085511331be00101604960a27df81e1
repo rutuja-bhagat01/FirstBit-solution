@@ -1,0 +1,71 @@
+package com.firstbit.inheretance;
+
+class Student {
+	int fBId;
+	String name;
+	double distance;
+	static int count = 0;
+	
+	//default constructor
+	Student()
+	{
+		fBId = 101;
+		name = "Not Given";
+		distance = 10;
+		count++;
+	}
+	
+	//para. constructor
+	Student(int fBId, String name, double distance) {
+//		super();
+		this.fBId = fBId;
+		this.name = name;
+		this.distance = distance;
+		count++;
+	}
+
+	public int getfBId() {
+		return fBId;
+	}
+
+	public void setfBId(int fBId) {
+		this.fBId = fBId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+	
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Student.count = count;
+	}
+
+	void display()
+	{
+		System.out.println("Firstbit ID is : "+this.fBId);
+		System.out.println("\nName is : "+this.name);
+		System.out.println("\nDistance travelled is : "+this.distance);
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+}

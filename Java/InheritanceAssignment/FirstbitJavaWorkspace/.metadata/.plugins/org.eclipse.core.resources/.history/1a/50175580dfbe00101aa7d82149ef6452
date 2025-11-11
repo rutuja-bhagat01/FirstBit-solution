@@ -1,0 +1,44 @@
+package com.firstbit.inheritanceDevice;
+
+class Device {
+   String brand;
+   double price;
+
+    // Default constructor
+    Device() {
+        System.out.println("Device default constructor called...");
+        this.brand = "Generic";
+        this.price = 10000.0;
+    }
+
+    // Parameterized constructor
+    Device(String brand, double price) {
+        System.out.println("Device parameterized constructor called...");
+        this.brand = brand;
+        this.price = price;
+    }
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+    
+	//display
+	void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: ₹" + price);
+    }
+}//class Device ends here
+
+

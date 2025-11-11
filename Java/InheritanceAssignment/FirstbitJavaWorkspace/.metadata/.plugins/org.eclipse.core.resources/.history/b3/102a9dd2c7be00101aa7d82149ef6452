@@ -1,0 +1,21 @@
+package com.firstbit.inheritanceBuilding;
+
+class Building {
+	String name;
+	String location;
+	int floors;
+	double totalAreaSqM;
+	double costPerSqM;
+	String owner;
+	int yearOfConstruction;
+	
+	//default constructor
+	public Building() {
+		System.out.println("Building default constructor called...");
+		name = "Not Assigned";
+		location = "Unknown";
+		floors = 0;
+		totalAreaSqM = 0.0;
+		
+	}
+}

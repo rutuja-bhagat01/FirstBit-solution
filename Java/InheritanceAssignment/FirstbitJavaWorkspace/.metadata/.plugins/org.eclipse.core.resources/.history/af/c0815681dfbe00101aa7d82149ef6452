@@ -1,0 +1,144 @@
+package com.firstbit.inheritanceDevice;
+
+class Device {
+   String brand;
+   double price;
+
+    // Default constructor
+    Device() {
+        System.out.println("Device default constructor called...");
+        this.brand = "Generic";
+        this.price = 10000.0;
+    }
+
+    // Parameterized constructor
+    Device(String brand, double price) {
+        System.out.println("Device parameterized constructor called...");
+        this.brand = brand;
+        this.price = price;
+    }
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+    
+	//display
+	void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: ₹" + price);
+    }
+}//class Device ends here
+
+class Laptop extends Device {
+   int ram;
+
+    Laptop() {
+        System.out.println("Laptop default constructor called...");
+        this.ram = 8;
+    }
+
+    Laptop(String brand, double price, int ram) {
+        super(brand, price);
+        System.out.println("Laptop parameterized constructor called...");
+        this.ram = ram;
+    }
+
+	public int getRam() {
+		return ram;
+	}
+
+	public void setRam(int ram) {
+		this.ram = ram;
+	}
+
+	//display
+	void display() {
+        super.display();
+        System.out.println("RAM: " + ram + " GB");
+    }
+}//class Laptop ends here
+
+class Smartphone extends Device {
+    String camera;
+
+    Smartphone() {
+        System.out.println("Smartphone default constructor called...");
+        this.camera = "48MP";
+    }
+
+    Smartphone(String brand, double price, String camera) {
+        super(brand, price);
+        System.out.println("Smartphone parameterized constructor called...");
+        this.camera = camera;
+    }
+
+	public String getCamera() {
+		return camera;
+	}
+
+	public void setCamera(String camera) {
+		this.camera = camera;
+	}
+    //display
+	void display() {
+        super.display();
+        System.out.println("Camera: " + camera);
+    }
+}//class Smartphone ends here
+
+class Tablet extends Device {
+    double screenSize;
+
+    Tablet() {
+        System.out.println("Tablet default constructor called...");
+        this.screenSize = 9.7;
+    }
+
+    Tablet(String brand, double price, double screenSize) {
+        super(brand, price);
+        System.out.println("Tablet parameterized constructor called...");
+        this.screenSize = screenSize;
+    }
+
+	public double getScreenSize() {
+		return screenSize;
+	}
+
+	public void setScreenSize(double screenSize) {
+		this.screenSize = screenSize;
+	}
+
+    //display
+	void display() {
+        super.display();
+        System.out.println("Screen Size: " + screenSize + " inches");
+    }
+}//class Tablet ends here
+
+class DemoInheritanceDevice {
+    public static void main(String[] args) {
+        System.out.println("\n--- Using Default Constructors ---");
+        Laptop l1 = new Laptop();
+        l1.display();
+
+        System.out.println("\n--- Using Parameterized Constructors ---");
+        Smartphone s1 = new Smartphone("Samsung", 55000, "108MP");
+        Tablet t1 = new Tablet("Apple", 60000, 10.5);
+
+        s1.display();
+        t1.display();
+    }
+}//class DemoInheritanceDevice ends here
+

@@ -1,0 +1,46 @@
+package com.firstbit.inheretance;
+
+class Student {
+	int fBId;
+	String name;
+	double distance;
+	int count;
+	
+	public int getfBId() {
+		return fBId;
+	}
+
+	public void setfBId(int fBId) {
+		this.fBId = fBId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+	
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+}

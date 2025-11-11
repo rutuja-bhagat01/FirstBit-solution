@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.firstbit.inheritance.PlacedStudent"/>
+    <fullyQualifiedTypeName name="com.firstbit.inheritance.Student"/>
+    <fullyQualifiedTypeName name="com.firstbit.inheritance.Employee"/>
+    <fullyQualifiedTypeName name="com.firstbit.inheritanceBuilding.Building"/>
+    <fullyQualifiedTypeName name="com.firstbit.inheritanceBuilding.ResidentialBuilding"/>
+    <fullyQualifiedTypeName name="com.firstbit.inheritanceBuilding.CommercialBuilding"/>
+</qualifiedTypeNameHistroy>

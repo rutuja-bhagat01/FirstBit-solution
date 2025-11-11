@@ -1,0 +1,39 @@
+package com.firstbit.inheritanceBuilding;
+
+class Building {
+	String name;
+	String location;
+	int floors;
+	double totalAreaSqM;
+	double costPerSqM;
+	String owner;
+	int yearOfConstruction;
+	
+	//default constructor
+	public Building() {
+		System.out.println("Building default constructor called...");
+		name = "Not Assigned";
+		location = "Unknown";
+		floors = 0;
+		totalAreaSqM = 0.0;
+		costPerSqM = 0.0;
+		owner = "NA";
+		yearOfConstruction = 0;
+	}
+
+	//parameterized constructor
+	Building(String name, String location, int floors, double totalAreaSqM, double costPerSqM, String owner,
+			int yearOfConstruction) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.floors = floors;
+		this.totalAreaSqM = totalAreaSqM;
+		this.costPerSqM = costPerSqM;
+		this.owner = owner;
+		this.yearOfConstruction = yearOfConstruction;
+	}
+	
+	
+	
+}//class Building ends here

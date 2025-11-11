@@ -1,0 +1,43 @@
+package com.firstbit.inheretance;
+
+public class PlacedStudent {
+	int fBId;
+	String name;
+	double distance;
+	String compName;
+	String designation;
+	
+	public int getfBId() {
+		return fBId;
+	}
+	public void setfBId(int fBId) {
+		this.fBId = fBId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getDistance() {
+		return distance;
+	}
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+	public String getCompName() {
+		return compName;
+	}
+	public void setCompName(String compName) {
+		this.compName = compName;
+	}
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	
+	
+	
+}

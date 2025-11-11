@@ -1,0 +1,101 @@
+package com.firstbit.inheritanceCourse;
+
+class Course {
+	String courseName;
+	int duration;
+
+	// Default constructor
+	Course() {
+		System.out.println("Course default constructor called...");
+		this.courseName = "General Course";
+		this.duration = 4;
+	}
+
+	// Parameterized constructor
+	Course(String courseName, int duration) {
+		System.out.println("Course parameterized constructor called...");
+		this.courseName = courseName;
+		this.duration = duration;
+	}
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public int getDuration() {
+		return duration;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
+	// Display
+	void display() {
+		System.out.println("Course Name: " + courseName);
+		System.out.println("Duration: " + duration + " weeks");
+	}
+}// class Course ends here
+//******************************************************************
+
+class OnlineCourse extends Course {
+	String platform;
+
+	OnlineCourse() {
+		System.out.println("OnlineCourse default constructor called...");
+		this.platform = "Udemy";
+	}
+
+	OnlineCourse(String courseName, int duration, String platform) {
+		super(courseName, duration);
+		System.out.println("OnlineCourse parameterized constructor called...");
+		this.platform = platform;
+	}
+
+	public String getPlatform() {
+		return platform;
+	}
+
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
+
+	// display
+	void display() {
+		super.display();
+		System.out.println("Platform: " + platform);
+	}
+}// class OnlineCourse ends here
+
+class OfflineCourse extends Course {
+	String location;
+
+	OfflineCourse() {
+		System.out.println("OfflineCourse default constructor called...");
+		this.location = "Pune Center";
+	}
+
+	OfflineCourse(String courseName, int duration, String location) {
+		super(courseName, duration);
+		System.out.println("OfflineCourse parameterized constructor called...");
+		this.location = location;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	// display
+	void display() {
+		super.display();
+		System.out.println("Location: " + location);
+	}
+}

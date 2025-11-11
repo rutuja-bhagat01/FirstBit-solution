@@ -1,0 +1,142 @@
+package com.firstbit.inheritanceBuilding;
+
+class Building {
+	String name;
+	String location;
+	int floors;
+	double totalAreaSqM;
+	double costPerSqM;
+	String owner;
+	int yearOfConstruction;
+	
+	//default constructor
+	public Building() {
+		System.out.println("Building default constructor called...");
+		name = "Not Assigned";
+		location = "Unknown";
+		floors = 0;
+		totalAreaSqM = 0.0;
+		costPerSqM = 0.0;
+		owner = "NA";
+		yearOfConstruction = 0;
+	}
+
+	//parameterized constructor
+	Building(String name, String location, int floors, double totalAreaSqM, double costPerSqM, String owner,
+			int yearOfConstruction) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.floors = floors;
+		this.totalAreaSqM = totalAreaSqM;
+		this.costPerSqM = costPerSqM;
+		this.owner = owner;
+		this.yearOfConstruction = yearOfConstruction;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public int getFloors() {
+		return floors;
+	}
+
+	public void setFloors(int floors) {
+		this.floors = floors;
+	}
+
+	public double getTotalAreaSqM() {
+		return totalAreaSqM;
+	}
+
+	public void setTotalAreaSqM(double totalAreaSqM) {
+		this.totalAreaSqM = totalAreaSqM;
+	}
+
+	public double getCostPerSqM() {
+		return costPerSqM;
+	}
+
+	public void setCostPerSqM(double costPerSqM) {
+		this.costPerSqM = costPerSqM;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getYearOfConstruction() {
+		return yearOfConstruction;
+	}
+
+	public void setYearOfConstruction(int yearOfConstruction) {
+		this.yearOfConstruction = yearOfConstruction;
+	}
+	
+	//to display 
+	void showBuildingInfo()
+	{
+		System.out.println("Building Name : "+name);
+		System.out.println("Location : "+location);
+		System.out.println("Floors : "+floors);
+		System.out.println("Total Area : "+totalAreaSqM+" sq.m");
+		System.out.println("Cost per Sq.m : Rs "+costPerSqM);
+		System.out.println("Year of construction : "+yearOfConstruction);
+		
+	}
+	
+	double calculateTotalCost()
+	{
+		return totalAreaSqM*costPerSqM;
+	}
+}//class Building ends here
+//--------------------------------------------------
+
+class ResidentialBuilding extends Building
+{
+	int noOfFlats;
+	String type;
+	
+	//default const.
+	ResidentialBuilding() {
+		super();
+		System.out.println("Residential Building default constructor called...");
+		noOfFlats = 10;
+		type = "Unknown";
+	}
+
+	//para. const.
+	public ResidentialBuilding(int noOfFlats, String type) {
+		super();
+		System.out.println("Residential para. const called...");
+		this.noOfFlats = noOfFlats;
+		this.type = type;
+	}
+	
+	void showResidentialDetails()
+	{
+		super.showBuildingInfo();
+		System.out.println("Number of flats: "+noOfFlats);
+		System.out.println("Type of flat: "+type);
+	}
+	
+	
+}
+

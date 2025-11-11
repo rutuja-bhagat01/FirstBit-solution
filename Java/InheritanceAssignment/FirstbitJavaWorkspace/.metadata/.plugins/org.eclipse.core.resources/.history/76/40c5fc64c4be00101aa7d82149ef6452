@@ -1,0 +1,171 @@
+package com.firstbit.inheritanceStudent;
+
+class Employee {
+
+	int id;
+	String name;
+	double salary;
+
+	// default constructor
+	Employee() {
+		System.out.println("Employee default constructor called...");
+		id = 131;
+		name = "Not given";
+		salary = 30000;
+	}
+
+	// para. constructor
+	Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	// display function
+	void display() {
+		System.out.println("Employee ID: " + this.id);
+		System.out.println("Name: " + this.name);
+		System.out.println("Salary : " + this.salary);
+	}
+}// class Employee ends here
+
+class Admin extends Employee {
+	double allowence;
+
+	// default constructor
+	Admin() {
+		System.out.println("Admin default construcor called...");
+		allowence = 2000;
+	}
+
+	// para. constructor
+	Admin(int id, String name, double salary,double allowence) {
+		super();
+		System.out.println("Admin para. construcor called...");
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.allowence = allowence;
+	}
+
+	// display function
+	void display() {
+		super.display();
+		System.out.println("Allowence: " + this.allowence);
+	}
+}// class Admin ends here
+
+class SalesManager extends Employee{
+	double incentive;
+	double target;
+
+	// default constructor
+	SalesManager() {
+		System.out.println("SalesManager default constructor called...");
+		incentive = 3000;
+		target = 5000;
+	}
+
+	// para. constructor
+	SalesManager(int id, String name, double salary,double incentive, double target) {
+		super();
+		System.out.println("SalesManager para. constructor called...");
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.incentive = incentive;
+		this.target = target;
+	}
+
+	// display function
+	void display() {
+		super.display();
+		System.out.println("Incentive : " + this.incentive);
+		System.out.println("Target : "+this.target);
+	}
+}//class SalesManager ends here
+
+class HR extends Employee
+{
+	double commission;
+	
+	//default constructor
+	HR() {
+		System.out.println("HR default constructor is called...");
+		commission = 4000;
+	}
+
+	//para. constructor
+	HR(int id, String name, double salary,double commission) {
+		super();
+		System.out.println("HR para. constructor is called...");
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.commission = commission;
+	}
+	
+	void display() {
+		super.display();
+		System.out.println("Commission : " + this.commission);
+	}
+}//class HR ends here
+
+class DemoInheritance1
+{
+	public static void main(String[] args) {
+	
+	System.out.println("\n=== EMPLOYEE OBJECTS ===");
+	Employee e1 = new Employee();
+	e1.display();
+
+	Employee e2 = new Employee(201, "Rutuja Bhagat", 55000);
+	e2.display();
+
+	System.out.println("\n=== ADMIN OBJECTS ===");
+	Admin a1 = new Admin();
+	a1.display();
+
+	Admin a2 = new Admin(202, "Aditya Patil", 60000, 5000);
+	a2.display();
+
+	System.out.println("\n=== SALESMANAGER OBJECTS ===");
+	SalesManager s1 = new SalesManager();
+	s1.display();
+
+	SalesManager s2 = new SalesManager(203, "Rahul Dravid", 70000, 8000, 12000);
+	s2.display();
+
+	System.out.println("\n=== HR OBJECTS ===");
+	HR h1 = new HR();
+	h1.display();
+
+	HR h2 = new HR(204, "Sneha More", 65000, 9000);
+	h2.display();
+	}
+}

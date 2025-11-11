@@ -1,0 +1,43 @@
+package com.firstbit.inheritanceCourse;
+
+class Course {
+    private String courseName;
+    private int duration;
+
+    // Default constructor
+    Course() {
+        System.out.println("Course default constructor called...");
+        this.courseName = "General Course";
+        this.duration = 4;
+    }
+
+    // Parameterized constructor
+    Course(String courseName, int duration) {
+        System.out.println("Course parameterized constructor called...");
+        this.courseName = courseName;
+        this.duration = duration;
+    }
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public int getDuration() {
+		return duration;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+    
+	// Display
+    void display() {
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Duration: " + duration + " weeks");
+    }
+}//class Course ends here
+

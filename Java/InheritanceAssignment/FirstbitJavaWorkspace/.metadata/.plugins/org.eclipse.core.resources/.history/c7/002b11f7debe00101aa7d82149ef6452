@@ -1,0 +1,5 @@
+package com.firstbit.inheritanceDevice;
+
+public class Device {
+
+}

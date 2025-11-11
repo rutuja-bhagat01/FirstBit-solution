@@ -1,0 +1,157 @@
+package com.firstbit.inheritance;
+
+class Student {
+	int fBId;
+	String name;
+	double distance;
+	static int count = 0;
+
+	// default constructor
+	Student() {
+		System.out.println("Student default constructor called...");
+		fBId = 101;
+		name = "Not Given";
+		distance = 10;
+		count++;
+	}
+
+	// para. constructor
+	Student(int fBId, String name, double distance) {
+		System.out.println("Student para. constructor called...");
+//		super();
+		this.fBId = fBId;
+		this.name = name;
+		this.distance = distance;
+		count++;
+	}
+
+	public int getfBId() {
+		return fBId;
+	}
+
+	public void setfBId(int fBId) {
+		this.fBId = fBId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Student.count = count;
+	}
+
+	void display() {
+		System.out.println("Firstbit ID is : " + this.fBId);
+		System.out.println("Name is : " + this.name);
+		System.out.println("Distance travelled is : " + this.distance);
+	}
+}// class Student ends here
+
+class PlacedStudent extends Student//step-1 "is-a"
+{
+	int fBId;
+	String name;
+	double distance;
+	String compName;
+	String designation;
+
+	PlacedStudent() {
+		System.out.println("PlacedStudent default constructor called...");
+		fBId = 101;
+		name = "Not given";
+		distance = 10;
+		compName = "Not given";
+		designation = "Not given";
+	}
+
+	PlacedStudent(int fBId, String name, double distance, String compName, String designation) {
+		System.out.println("PlacedStudent para. constructor called...");
+		this.fBId = fBId;
+		this.name = name;
+		this.distance = distance;
+		this.compName = compName;
+		this.designation = designation;
+	}
+
+	public int getfBId() {
+		return fBId;
+	}
+
+	public void setfBId(int fBId) {
+		this.fBId = fBId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+
+	public String getCompName() {
+		return compName;
+	}
+
+	public void setCompName(String compName) {
+		this.compName = compName;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	void display() {
+//		System.out.println("Firstbit ID is : " + this.fBId);
+//		System.out.println("Name is : " + this.name);
+//		System.out.println("Distance travelled is : " + this.distance);
+		System.out.println("Company Name is : " + this.compName);
+		System.out.println("Designation is : " + this.designation);
+	}
+}// class PlacedDistance ends here
+
+class DemoInheritance {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Student s1 = new Student();
+//		System.out.println("Student total count = "+Student.getCount());
+		
+//		Student s2 = new Student(102,"Aditya",100);
+//		System.out.println("Student total count = "+Student.getCount());
+		
+		PlacedStudent ps1 = new PlacedStudent();
+		ps1.display();
+		
+		PlacedStudent ps2 = new PlacedStudent(78, "Rahul Dravid", 655, "BCCI","Coach");
+		System.out.println("Student total count: "+Student.getCount());
+	}
+}
